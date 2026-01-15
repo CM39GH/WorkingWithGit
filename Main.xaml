@@ -89,22 +89,18 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="901,1323" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1057,1502" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="486,1300" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="486,1479" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String) From {&quot;Madrid&quot;,&quot;valencia&quot;,&quot;BARCELONA&quot;}]" Name="list_T_SpainCities" />
         <Variable x:TypeArguments="scg:List(x:String)" Name="list_T_UKCities" />
         <Variable x:TypeArguments="scg:List(x:String)" Name="list_T_AllCities" />
-        <Variable x:TypeArguments="scg:List(x:String)" Name="AllCitiesTitleCase">
-          <Variable.Default>
-            <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="new List(of string)" />
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of string)]" Name="AllCitiesTitleCase" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -124,13 +120,14 @@
           <InArgument x:TypeArguments="scg:List(x:String)">[list_T_AllCities]</InArgument>
         </InvokeMethod.TargetObject>
       </InvokeMethod>
-      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="452,532" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list_T_AllCities]">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;test&quot;]" />
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="452,536" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list_T_AllCities]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:String">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,401" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,405" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="TitleCaseTemp" />
               </Sequence.Variables>
