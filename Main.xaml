@@ -120,7 +120,7 @@
           <InArgument x:TypeArguments="scg:List(x:String)">[list_T_AllCities]</InArgument>
         </InvokeMethod.TargetObject>
       </InvokeMethod>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;test&quot;]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;test a second time&quot;]" />
       <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="452,536" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list_T_AllCities]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:String">
